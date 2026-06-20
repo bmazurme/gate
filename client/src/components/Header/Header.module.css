@@ -1,0 +1,14 @@
+.header {
+  height: 56px;
+  flex-shrink: 0;
+  border-bottom: 1px solid var(--g-color-line-generic);
+}
+
+.titles {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.search {
+  width: 240px;
+}
