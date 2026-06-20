@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM"],
+    "types": ["cypress", "node"],
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "module": "esnext",
+    "isolatedModules": true,
+    "strict": true,
+    "noEmit": true
+  },
+  "include": ["**/*.ts", "../src/store/api/subscriptionsApi/types.ts"]
+}
