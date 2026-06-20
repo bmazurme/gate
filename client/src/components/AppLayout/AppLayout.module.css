@@ -1,0 +1,8 @@
+.main {
+  overflow: hidden;
+  min-width: 0;
+}
+
+.content {
+  overflow: auto;
+}
