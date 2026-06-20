@@ -1,0 +1,39 @@
+.sidebar {
+  flex-shrink: 0;
+  height: 100vh;
+  border-right: 1px solid var(--g-color-line-generic);
+  background: var(--g-color-base-generic);
+  transition: width 0.2s ease;
+  overflow: hidden;
+}
+
+.brandRow {
+  height: 56px;
+  flex-shrink: 0;
+  border-bottom: 1px solid var(--g-color-line-generic);
+}
+
+.brandIcon {
+  border-radius: 8px;
+  background: var(--g-color-base-brand);
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.brandText {
+  overflow: hidden;
+  min-width: 0;
+}
+
+.nav {
+  overflow: hidden;
+}
+
+.footer {
+  flex-shrink: 0;
+  border-top: 1px solid var(--g-color-line-generic);
+}
+
+.rowExpanded {
+  justify-content: flex-start;
+}
