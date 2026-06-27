@@ -1,0 +1,35 @@
+# compiled output
+dist/
+build/
+node_modules/
+
+# logs
+logs/
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# OS
+.DS_Store
+
+# Tests
+coverage/
+*.lcov
+
+# IDEs and editors
+.idea/
+.vscode/
+*.swp
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Temp directories
+tmp/
+temp/
+/design
