@@ -1,0 +1,51 @@
+import {
+  Column,
+  CreateDateColumn,
+  Entity,
+  OneToMany,
+  PrimaryGeneratedColumn,
+  UpdateDateColumn,
+} from 'typeorm';
+import { Exclude } from 'class-transformer';
+import { Subscription } from '../../subscriptions/entities/subscription.entity';
+import { Role } from '../../roles/enums/role.enum';
+
+@Entity('users')
+export class User {
+  @PrimaryGeneratedColumn('uuid')
+  id: string;
+
+  @Column({ unique: true })
+  email: string;
+
+  @Column({ select: false })
+  @Exclude()
+  password: string;
+
+  @Column({
+    name: 'refresh_token_hash',
+    type: 'varchar',
+    nullable: true,
+    select: false,
+  })
+  @Exclude()
+  refreshTokenHash: string | null;
+
+  @Column({ type: 'varchar', nullable: true })
+  name: string | null;
+
+  @Column({ type: 'enum', enum: Role, array: true, default: [Role.USER] })
+  roles: Role[];
+
+  @Column({ name: 'is_blocked', default: false })
+  isBlocked: boolean;
+
+  @OneToMany(() => Subscription, (subscription) => subscription.user)
+  subscriptions: Subscription[];
+
+  @CreateDateColumn({ name: 'created_at' })
+  createdAt: Date;
+
+  @UpdateDateColumn({ name: 'updated_at' })
+  updatedAt: Date;
+}
